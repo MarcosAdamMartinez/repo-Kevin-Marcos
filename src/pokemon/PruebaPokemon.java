@@ -1,5 +1,7 @@
 package pokemon;
 
+import java.io.BufferedWriter;
+import java.io.FileWriter;
 import java.util.ArrayList;
 //import java.util.HashMap;
 import java.util.LinkedHashSet;
@@ -75,6 +77,8 @@ public class PruebaPokemon {
 //        System.out.println("\n\n");
 
         System.out.println(mapa);
+
+        p1.escribir(equipo);
 
     }
 }
