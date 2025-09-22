@@ -22,6 +22,11 @@ public class Pokemon implements Comparable<Pokemon> {
 
     }
 
+    public Pokemon(String nombre, String apodo){
+        this.nombre = nombre;
+        this.apodo = apodo;
+    }
+
     @Override
     public String toString() {
         return "Pokemon: Nivel: " + nivel + ", Nombre: " + nombre + ", Apodo: " + apodo +", Movimientos: "+movimientos+", Numero Pokedex: " + numPokedex+"\n";
