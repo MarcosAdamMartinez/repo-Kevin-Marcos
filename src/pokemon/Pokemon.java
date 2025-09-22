@@ -1,5 +1,10 @@
 package pokemon;
 
+import java.io.File;
+import java.io.FileWriter;
+import java.io.BufferedWriter;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 public class Pokemon implements Comparable<Pokemon> {
@@ -9,6 +14,11 @@ public class Pokemon implements Comparable<Pokemon> {
     private String apodo;
     private String movimientos;
     private int numPokedex;
+
+    File archivo = new File("pokemon.csv");
+    FileWriter fw;
+    BufferedWriter bw;
+
 
     public Pokemon() {}
 
@@ -51,6 +61,27 @@ public class Pokemon implements Comparable<Pokemon> {
 
     public boolean equals(Pokemon p) {
         return ((this.nombre.equals(p.nombre)) && (this.apodo.equals(p.apodo)) && (this.nivel == p.nivel) && (this.movimientos.equals(p.movimientos)) && (this.numPokedex == p.numPokedex));
+    }
+
+    public void escribir(List<Pokemon> lista){
+
+        try {
+            fw = new FileWriter(archivo);
+            bw = new BufferedWriter(fw);
+
+            for (Pokemon p : lista) {
+                bw.write(p.getNombre() + ","
+                        + p.getApodo() + ","
+                        + p.getNivel() + ","
+                        + p.getMovimientos() + ","
+                        + p.getNumPokedex());
+                bw.newLine();
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
     }
 
     public int getNivel() {
