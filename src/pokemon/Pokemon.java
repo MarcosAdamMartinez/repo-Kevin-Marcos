@@ -1,3 +1,5 @@
+package pokemon;
+
 import java.util.Objects;
 
 public class Pokemon implements Comparable<Pokemon> {
