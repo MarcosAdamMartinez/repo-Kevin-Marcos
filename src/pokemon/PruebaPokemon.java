@@ -31,6 +31,7 @@ public class PruebaPokemon {
 
 //        Pokemon.escribir(equipo);
         Pokemon.leer();
+
 //        Reflexión: ¿mejoraría en algo usar ficheros binarios bien sea con DataOutputStream o con ObjectOutputStream (e Input) Razonad la respuesta.
 //        Usar ficheros binarios podria mejorar eficiencia, evitando errores de parseo y ficheros grandes como en CSV.
 //        DataOutputStream permite control y portabilidad, mientras que ObjectOutputStream es rápido y cómodo en Java pero frágil
