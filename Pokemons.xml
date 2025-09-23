@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment>Pokemons y sus apodos</comment>
+<entry key="Jigglypuff">Canción</entry>
+<entry key="Bulbasaur">Hoja</entry>
+<entry key="Pikachu">Rayo</entry>
+<entry key="Psyduck">Confusión</entry>
+<entry key="Squirtle">Aguacito</entry>
+<entry key="Eevee">Evolución</entry>
+<entry key="Snorlax">Dormilón</entry>
+<entry key="Dragonite">Volador</entry>
+<entry key="Charmander">Llamita</entry>
+<entry key="Meowth">Dinero</entry>
+</properties>

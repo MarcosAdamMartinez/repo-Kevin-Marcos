@@ -31,6 +31,7 @@ public class PruebaProperties {
             System.out.println("Archivo creado properties creado correctamente");
 
             //Archivo xml
+            System.out.println("-----Archivo XML-----");
 
             FileOutputStream archivoXML = new FileOutputStream("Perros.xml");
 
