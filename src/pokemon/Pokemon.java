@@ -1,8 +1,7 @@
 package pokemon;
 
-import java.io.File;
-import java.io.FileWriter;
-import java.io.BufferedWriter;
+import java.io.*;
+import java.sql.SQLOutput;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
@@ -15,10 +14,7 @@ public class Pokemon implements Comparable<Pokemon> {
     private String movimientos;
     private int numPokedex;
 
-    File archivo = new File("pokemon.csv");
-    FileWriter fw;
-    BufferedWriter bw;
-
+    static PrintWriter pw;
 
     public Pokemon() {}
 
@@ -63,25 +59,60 @@ public class Pokemon implements Comparable<Pokemon> {
         return ((this.nombre.equals(p.nombre)) && (this.apodo.equals(p.apodo)) && (this.nivel == p.nivel) && (this.movimientos.equals(p.movimientos)) && (this.numPokedex == p.numPokedex));
     }
 
-    public void escribir(List<Pokemon> lista){
+    static String reemplazar(String s){
+        if (s.contains(",")){
+            s = s.replace(",","-");
+        }
+        return s;
+    }
+
+    public static void escribir(List<Pokemon> lista){
 
         try {
-            fw = new FileWriter(archivo);
-            bw = new BufferedWriter(fw);
-
+            pw = new PrintWriter(new FileWriter(new File("pokemon.csv")));
+            pw.write("Nombre,Apodo,Nivel,Movimientos,NumeroPokedex\n");
             for (Pokemon p : lista) {
-                bw.write(p.getNombre() + ","
+                pw.println(p.getNombre() + ","
                         + p.getApodo() + ","
                         + p.getNivel() + ","
-                        + p.getMovimientos() + ","
+                        + reemplazar(p.getMovimientos()) + ","
                         + p.getNumPokedex());
-                bw.newLine();
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            try{
+                pw.close();
+            } catch (Exception e){
+
+            }
+        }
+
+    }
+
+    public static void leer(){
+
+        try {
+
+            BufferedReader br = new BufferedReader(new FileReader(new File("pokemon.csv")));
+            String linea;
+            br.readLine();
+            while ((linea = br.readLine()) != null){
+                String[] partes = linea.split(",");
+                String nombre = partes[0];
+                String apodo = partes[1];
+                int nivel = Integer.parseInt(partes[2]);
+                String movs = partes[3];
+                int numPok = Integer.parseInt(partes[4]);
+
+                Pokemon p = new Pokemon(nombre,apodo,nivel,movs,numPok);
+                System.out.print(p);
             }
 
         } catch (Exception e) {
             e.printStackTrace();
         }
-
     }
 
     public int getNivel() {
