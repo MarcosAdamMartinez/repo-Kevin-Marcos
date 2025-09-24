@@ -1,4 +1,4 @@
-package accesoADatos.procesos;
+package procesos;
 
 import java.io.File;
 
