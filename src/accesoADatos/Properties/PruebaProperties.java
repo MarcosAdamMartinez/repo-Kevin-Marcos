@@ -1,4 +1,4 @@
-package Properties;
+package accesoADatos.Properties;
 
 import java.io.FileOutputStream;
 import java.io.IOException;

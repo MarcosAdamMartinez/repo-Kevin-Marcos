@@ -1,8 +1,6 @@
-package pokemon;
+package accesoADatos.pokemon;
 
 import java.io.*;
-import java.sql.SQLOutput;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
@@ -54,7 +52,7 @@ public class Pokemon implements Comparable<Pokemon> {
             }
         }
     }
-//      Metodos para comparar si 2 pokemon son iguales
+//      Metodos para comparar si 2 accesoADatos.pokemon son iguales
     @Override
     public int hashCode() {
         return Objects.hash(nivel, nombre, numPokedex, apodo, movimientos);
@@ -74,7 +72,7 @@ public class Pokemon implements Comparable<Pokemon> {
     public static void escribir(List<Pokemon> lista){
 
         try {
-            pw = new PrintWriter(new FileWriter(new File("pokemon.csv")));
+            pw = new PrintWriter(new FileWriter(new File("accesoADatos.pokemon.csv")));
             pw.write("Nombre,Apodo,Nivel,Movimientos,NumeroPokedex\n");
             for (Pokemon p : lista) {
                 pw.println(p.getNombre() + ","
@@ -100,7 +98,7 @@ public class Pokemon implements Comparable<Pokemon> {
 
         try {
 
-            BufferedReader br = new BufferedReader(new FileReader(new File("pokemon.csv")));
+            BufferedReader br = new BufferedReader(new FileReader(new File("accesoADatos.pokemon.csv")));
             String linea;
 //            Saltamos la linea para saltar el Nombre,Nivel...
             br.readLine();

@@ -1,4 +1,4 @@
-package Properties;
+package accesoADatos.Properties;
 
 import java.io.FileInputStream;
 import java.util.Properties;

@@ -1,4 +1,4 @@
-package imagen;
+package accesoADatos.imagen;
 
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;

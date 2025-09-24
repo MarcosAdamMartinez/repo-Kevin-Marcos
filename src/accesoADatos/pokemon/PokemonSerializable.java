@@ -1,4 +1,4 @@
-package pokemon;
+package accesoADatos.pokemon;
 
 import java.io.*;
 import java.util.List;
@@ -65,7 +65,7 @@ public class PokemonSerializable implements Comparable<PokemonSerializable>,Seri
     public static void escribir(List<PokemonSerializable> lista){
 
         try {
-            ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(new File("pokemon.dat")));
+            ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(new File("accesoADatos.pokemon.dat")));
             for (PokemonSerializable ps: lista){
                 oos.writeObject(ps);
             }
@@ -85,7 +85,7 @@ public class PokemonSerializable implements Comparable<PokemonSerializable>,Seri
     public static void leer(){
 
         try {
-            ObjectInputStream ois = new ObjectInputStream(new FileInputStream(new File("pokemon.dat")));
+            ObjectInputStream ois = new ObjectInputStream(new FileInputStream(new File("accesoADatos.pokemon.dat")));
             while (true) {
                 try {
 //                    Creamos una variable e introducimos el objeto leido en ella

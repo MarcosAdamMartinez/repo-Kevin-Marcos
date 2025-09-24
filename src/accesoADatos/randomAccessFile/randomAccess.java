@@ -1,4 +1,4 @@
-package randomAccessFile;
+package accesoADatos.randomAccessFile;
 
 import java.io.*;
 import java.util.*;

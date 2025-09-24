@@ -1,4 +1,4 @@
-package pokemon;
+package accesoADatos.pokemon;
 
 import java.util.ArrayList;
 import java.util.LinkedHashMap;

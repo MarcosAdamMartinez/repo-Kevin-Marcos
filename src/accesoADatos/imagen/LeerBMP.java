@@ -1,4 +1,4 @@
-package imagen;
+package accesoADatos.imagen;
 import java.io.RandomAccessFile;
 import java.io.IOException;
 

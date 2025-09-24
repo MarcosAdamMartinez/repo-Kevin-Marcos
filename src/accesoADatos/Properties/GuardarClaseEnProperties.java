@@ -1,4 +1,4 @@
-package Properties;
+package accesoADatos.Properties;
 
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -6,7 +6,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Properties;
 
-import pokemon.Pokemon;
+import accesoADatos.pokemon.Pokemon;
 
 public class GuardarClaseEnProperties {
 
@@ -35,9 +35,9 @@ public class GuardarClaseEnProperties {
 
         /*
          * Aqui creamos varios pokemones y los guardamos en un mapa, donde la clave sera
-         * el nombre del pokemon y el valor sera el apodo del pokemon, para podeer guardarlos en
-         * properties, agreaamos un constructor a la clase pokemon que solo reciba el nombre y 
-         * el apodo del pokemon, y ya con esto guardamos los pokemones en el mapa para despues
+         * el nombre del accesoADatos.pokemon y el valor sera el apodo del accesoADatos.pokemon, para podeer guardarlos en
+         * properties, agreaamos un constructor a la clase accesoADatos.pokemon que solo reciba el nombre y
+         * el apodo del accesoADatos.pokemon, y ya con esto guardamos los pokemones en el mapa para despues
          * guardarlos en el properties
          */
 

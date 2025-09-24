@@ -1,4 +1,4 @@
-package Properties;
+package accesoADatos.Properties;
 
 import java.io.FileInputStream;
 import java.util.HashMap;
@@ -11,7 +11,7 @@ public class LeerClaseEnProperties {
         //Aqui leeremos el archivo properties que hemos creado en la clase GuardarClaseEnProperties
         //y mostraremos los datos por consola
 
-        //Para leer el archivo properties, usamos la clase Properties y el metodo load
+        //Para leer el archivo properties, usamos la clase accesoADatos.Properties y el metodo load
         //el cual recibe un FileInputStream como parametro
 
         Properties propertie = new Properties();
