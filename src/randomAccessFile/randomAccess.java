@@ -11,9 +11,9 @@ import java.util.*;
             Scanner teclado = new Scanner(System.in);
 
             if (archivo.exists()) {
-
                 try (DataInputStream dis = new DataInputStream(new FileInputStream(archivo))) {
                     for (int i = 0; i < nums; i++) {
+//                        Añadimos el numero introducido por teclado
                         numeros.add(dis.readInt());
                     }
                 } catch (IOException e) {
@@ -21,6 +21,7 @@ import java.util.*;
                 }
             } else {
                 try (DataOutputStream dos = new DataOutputStream(new FileOutputStream(archivo))) {
+//                    Llenamos con 0 la lista
                     for (int i = 0; i < nums; i++) {
                         dos.writeInt(0);
                         numeros.add(0);
@@ -52,7 +53,7 @@ import java.util.*;
                         int numNuevo = teclado.nextInt();
 
                         numeros.set(posicion, numNuevo);
-
+//                          Busca por posicion y como los int ocupan 4Bytes se mueve de 4 en 4
                         raf.seek(posicion * 4L);
                         raf.writeInt(numNuevo);
 

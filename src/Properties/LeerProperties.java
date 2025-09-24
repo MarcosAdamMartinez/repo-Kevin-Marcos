@@ -17,7 +17,6 @@ public class LeerProperties {
                 System.out.println(clave + " = " + valor);
             }
 
-            //Archivo XML
             System.out.println("-----Archivo XML-----");
 
             FileInputStream archivoXML = new FileInputStream("Perros.xml");

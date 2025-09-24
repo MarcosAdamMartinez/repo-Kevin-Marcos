@@ -25,12 +25,10 @@ public class PruebaProperties {
 
         try {
             FileOutputStream archivo = new FileOutputStream("Perros.properties");
-            /* */
 
             propertie.store(archivo, "Razas de Perros");
             System.out.println("Archivo creado properties creado correctamente");
 
-            //Archivo xml
             System.out.println("-----Archivo XML-----");
 
             FileOutputStream archivoXML = new FileOutputStream("Perros.xml");

@@ -61,7 +61,7 @@ public class PokemonSerializable implements Comparable<PokemonSerializable>,Seri
         return ((this.nombre.equals(p.nombre)) && (this.apodo.equals(p.apodo)) && (this.nivel == p.nivel) && (this.movimientos.equals(p.movimientos)) && (this.numPokedex == p.numPokedex));
     }
 
-
+//      Metodo para escribir con un ObjectOutputStream
     public static void escribir(List<PokemonSerializable> lista){
 
         try {
@@ -81,13 +81,14 @@ public class PokemonSerializable implements Comparable<PokemonSerializable>,Seri
         }
 
     }
-
+//      Metodo para leer con ObjectInputStream
     public static void leer(){
 
         try {
             ObjectInputStream ois = new ObjectInputStream(new FileInputStream(new File("pokemon.dat")));
             while (true) {
                 try {
+//                    Creamos una variable e introducimos el objeto leido en ella
                     PokemonSerializable ps = (PokemonSerializable) ois.readObject();
                     System.out.print(ps);
                 } catch (EOFException e) {

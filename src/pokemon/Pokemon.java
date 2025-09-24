@@ -37,7 +37,7 @@ public class Pokemon implements Comparable<Pokemon> {
     public String toString() {
         return "Pokemon: Nivel: " + nivel + ", Nombre: " + nombre + ", Apodo: " + apodo +", Movimientos: "+movimientos+", Numero Pokedex: " + numPokedex+"\n";
     }
-
+//    Comparador
     @Override
     public int compareTo(Pokemon o) {
         if (this.nivel < o.nivel) {
@@ -54,7 +54,7 @@ public class Pokemon implements Comparable<Pokemon> {
             }
         }
     }
-
+//      Metodos para comparar si 2 pokemon son iguales
     @Override
     public int hashCode() {
         return Objects.hash(nivel, nombre, numPokedex, apodo, movimientos);
@@ -63,14 +63,14 @@ public class Pokemon implements Comparable<Pokemon> {
     public boolean equals(Pokemon p) {
         return ((this.nombre.equals(p.nombre)) && (this.apodo.equals(p.apodo)) && (this.nivel == p.nivel) && (this.movimientos.equals(p.movimientos)) && (this.numPokedex == p.numPokedex));
     }
-
+//      Metodo que reemplaza las "," de los movmientos por "-"
     static String reemplazar(String s){
         if (s.contains(",")){
             s = s.replace(",","-");
         }
         return s;
     }
-
+//      Metodo para escribir con el PrintWriter
     public static void escribir(List<Pokemon> lista){
 
         try {
@@ -95,15 +95,17 @@ public class Pokemon implements Comparable<Pokemon> {
         }
 
     }
-
+//      Metodo para leer el archivo
     public static void leer(){
 
         try {
 
             BufferedReader br = new BufferedReader(new FileReader(new File("pokemon.csv")));
             String linea;
+//            Saltamos la linea para saltar el Nombre,Nivel...
             br.readLine();
             while ((linea = br.readLine()) != null){
+//                Separamos cada campo por ","
                 String[] partes = linea.split(",");
                 String nombre = partes[0];
                 String apodo = partes[1];
@@ -119,7 +121,7 @@ public class Pokemon implements Comparable<Pokemon> {
             e.printStackTrace();
         }
     }
-
+//      Getters y Setters
     public int getNivel() {
         return nivel;
     }
