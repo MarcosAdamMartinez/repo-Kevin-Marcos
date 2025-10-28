@@ -12,6 +12,8 @@ public class TriangulosHilos extends Thread{
         this.altura = altura;
         this.base = base;
         this.prioridad = prioridad;
+
+
     }
 
     @Override
