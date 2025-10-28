@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment>Razas de Perros</comment>
+<entry key="zeus">Rottweiler, 4</entry>
+<entry key="firulais">Labrador, 12</entry>
+<entry key="toby">Golden_Retriever, 14</entry>
+<entry key="max">Pastor_Aleman, 10</entry>
+<entry key="daisy">Chihuahua, 5</entry>
+<entry key="rocky">Bulldog, 2</entry>
+<entry key="luna">Beagle, 9</entry>
+</properties>
