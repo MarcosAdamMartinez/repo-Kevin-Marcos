@@ -26,8 +26,8 @@ public class PruebaPokemon {
         equipo.add(p4);
         equipo.add(p5);
 
-//        Pokemon.escribir(equipo);
-//        Pokemon.leer();
+        //Pokemon.escribir(equipo);
+        Pokemon.leer();
 
         PokemonSerializable ps1 = new PokemonSerializable("Xerneas","Quispe",73,"Fuerza Lunar,Carantoña,Esfera Aural,Testarazo",735);
         PokemonSerializable ps2 = new PokemonSerializable("Camerupt","El Chepas",56,"Terremoto,Antiaereo,Lanzallamas,Golpe Cuerpo",543);
@@ -44,7 +44,7 @@ public class PruebaPokemon {
         equipo3.add(ps5);
 
 //        PokemonSerializable.escribir(equipo3);
-        PokemonSerializable.leer();
+        //PokemonSerializable.leer();
 
 //        Reflexión: ¿mejoraría en algo usar ficheros binarios bien sea con DataOutputStream o con ObjectOutputStream (e Input) Razonad la respuesta.
 //        Usar ficheros binarios podria mejorar eficiencia, evitando errores de parseo y ficheros grandes como en CSV.

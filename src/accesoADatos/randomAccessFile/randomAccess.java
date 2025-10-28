@@ -7,14 +7,14 @@ import java.util.*;
         public static void main(String[] args) {
             File archivo = new File("datos.bin");
             int nums = 20;
-            ArrayList<Integer> numeros = new ArrayList<>(nums);
+            ArrayList<Long> numeros = new ArrayList<>(nums);
             Scanner teclado = new Scanner(System.in);
 
             if (archivo.exists()) {
                 try (DataInputStream dis = new DataInputStream(new FileInputStream(archivo))) {
                     for (int i = 0; i < nums; i++) {
 //                        Añadimos el numero introducido por teclado
-                        numeros.add(dis.readInt());
+                        numeros.add(dis.readLong());
                     }
                 } catch (IOException e) {
                     e.printStackTrace();
@@ -23,8 +23,8 @@ import java.util.*;
                 try (DataOutputStream dos = new DataOutputStream(new FileOutputStream(archivo))) {
 //                    Llenamos con 0 la lista
                     for (int i = 0; i < nums; i++) {
-                        dos.writeInt(0);
-                        numeros.add(0);
+                        dos.writeLong(0);
+                        numeros.add(0L);
                     }
                 } catch (IOException e) {
                     e.printStackTrace();
@@ -50,12 +50,12 @@ import java.util.*;
                         System.out.println("Adios . . .");
                     } else if (posicion >= 0 && posicion < nums) {
                         System.out.print("Introduce el nuevo numero: ");
-                        int numNuevo = teclado.nextInt();
+                        long numNuevo = teclado.nextLong();
 
                         numeros.set(posicion, numNuevo);
 //                          Busca por posicion y como los int ocupan 4Bytes se mueve de 4 en 4
-                        raf.seek(posicion * 4L);
-                        raf.writeInt(numNuevo);
+                        raf.seek(posicion * 8L);
+                        raf.writeLong(numNuevo);
 
                     } else {
                         System.out.println("Posicion introducida no valida .");

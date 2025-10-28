@@ -17,8 +17,8 @@ public class LeerBMP {
             System.out.println("Ancho: " + ancho + " px");
             System.out.println("Alto: " + alto + " px");
 
-            int nuevoAncho = ancho * 2;
-            int nuevoAlto = alto * 2;
+            int nuevoAncho = ancho / 2;
+            int nuevoAlto = alto / 2;
 
             raf.seek(18);
             raf.writeInt(Integer.reverseBytes(nuevoAncho));

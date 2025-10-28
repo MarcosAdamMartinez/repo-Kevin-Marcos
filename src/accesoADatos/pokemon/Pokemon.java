@@ -72,7 +72,7 @@ public class Pokemon implements Comparable<Pokemon> {
     public static void escribir(List<Pokemon> lista){
 
         try {
-            pw = new PrintWriter(new FileWriter(new File("accesoADatos.pokemon.csv")));
+            pw = new PrintWriter(new FileWriter(new File("pokemon.csv")));
             pw.write("Nombre,Apodo,Nivel,Movimientos,NumeroPokedex\n");
             for (Pokemon p : lista) {
                 pw.println(p.getNombre() + ","
@@ -98,7 +98,7 @@ public class Pokemon implements Comparable<Pokemon> {
 
         try {
 
-            BufferedReader br = new BufferedReader(new FileReader(new File("accesoADatos.pokemon.csv")));
+            BufferedReader br = new BufferedReader(new FileReader(new File("pokemon.csv")));
             String linea;
 //            Saltamos la linea para saltar el Nombre,Nivel...
             br.readLine();

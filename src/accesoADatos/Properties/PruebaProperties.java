@@ -2,6 +2,7 @@ package accesoADatos.Properties;
 
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Properties;
 
 public class PruebaProperties {
@@ -15,13 +16,13 @@ public class PruebaProperties {
 
         //Para agregar valores al properties usamos el metodo setProperty el cual resive dos
         //parametros, el primero es la clave y el segundo el valor y ambos son String
-        propertie.setProperty("firulais", "Labrador");
-        propertie.setProperty("max", "Pastor_Aleman");
-        propertie.setProperty("rocky", "Bulldog");
-        propertie.setProperty("luna", "Beagle");
-        propertie.setProperty("toby", "Golden_Retriever");
-        propertie.setProperty("daisy", "Chihuahua");
-        propertie.setProperty("zeus", "Rottweiler");
+        propertie.setProperty("firulais", "Labrador" + ", " + 12);
+        propertie.setProperty("max", "Pastor_Aleman" + ", " + 10);
+        propertie.setProperty("rocky", "Bulldog" + ", " + 2);
+        propertie.setProperty("luna", "Beagle" + ", " + 9);
+        propertie.setProperty("toby", "Golden_Retriever" + ", " + 14);
+        propertie.setProperty("daisy", "Chihuahua" + ", " + 5);
+        propertie.setProperty("zeus", "Rottweiler" + ", " + 4);
 
         try {
             FileOutputStream archivo = new FileOutputStream("Perros.properties");
